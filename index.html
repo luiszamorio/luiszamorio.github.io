@@ -679,6 +679,116 @@
       }
     }
   </style>
+
+<style>
+/* ===== DISEÑO 2026 — referencia visual solicitada ===== */
+:root{
+  --navy:#031b2e; --navy2:#052f50; --cyan:#00d9f5; --blue:#0068d8;
+  --ink:#09213a; --soft:#f7fbff;
+}
+body{font-family:Arial,Helvetica,sans-serif;background:#fff}
+.contenedor{width:min(1410px,92%);margin:auto}
+
+/* header compacto */
+header{position:sticky;top:0;background:rgba(3,27,46,.98);backdrop-filter:blur(12px)}
+.barra{min-height:104px}
+.logo-oficial{width:285px;max-height:92px;object-fit:contain;object-position:left center}
+nav{gap:34px}
+nav a{font-size:15px}
+nav a:first-child{position:relative}
+nav a:first-child:after{content:"";position:absolute;left:0;right:0;bottom:-15px;height:3px;background:var(--cyan)}
+
+/* hero tipo banner */
+.hero{
+ min-height:510px;
+ background:
+ radial-gradient(circle at 72% 28%,rgba(0,142,221,.28),transparent 27%),
+ linear-gradient(105deg,#031a2d 0%,#063b63 58%,#031b2e 100%);
+}
+.hero-grid{grid-template-columns:1.05fr .95fr;gap:28px;padding:38px 0 0}
+.hero h1{font-size:clamp(55px,6.5vw,92px);margin-bottom:8px}
+.mini-logo{font-size:18px;margin-bottom:6px}
+.sitio-oficial{margin-bottom:9px}
+.especialidades{font-size:22px;margin-bottom:10px}
+.introduccion{font-size:16px;line-height:1.45;max-width:520px;margin-bottom:18px}
+.boton{border-radius:12px;padding:13px 24px}
+.foto-area{min-height:405px;align-self:end}
+.foto-placeholder{
+ width:min(100%,510px);height:405px;padding:0;border:0;border-radius:0;
+ background:transparent;box-shadow:none;overflow:hidden;
+}
+.foto-luis{
+ width:100%;height:100%;object-fit:cover;object-position:center 18%;
+ border-radius:0;
+ -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 82%,transparent 100%);
+ mask-image:linear-gradient(to bottom,#000 0%,#000 82%,transparent 100%);
+}
+
+/* tres tarjetas */
+.areas{padding:22px 0;background:#fff}
+.areas-grid{gap:30px}
+.area{padding:18px 24px;border-radius:16px;box-shadow:0 8px 22px rgba(0,63,110,.05)}
+.icono{width:52px;height:52px;margin:0 auto 7px;border-radius:12px;font-size:25px}
+.area h3{font-size:20px;margin-bottom:1px}
+.area p{line-height:1.35}
+
+/* sobre mí */
+.sobre-mi{padding:48px 0;background:linear-gradient(115deg,#021725,#04365b)}
+.sobre-grid{grid-template-columns:.95fr 1.05fr;gap:55px}
+.etiqueta{margin-bottom:8px}
+.sobre-mi h2{font-size:clamp(38px,4.4vw,58px);margin-bottom:12px}
+.sobre-mi p{font-size:15px;line-height:1.5}
+.lista{gap:10px}
+.item{padding:13px 16px;background:transparent;border:0}
+.item-numero{min-width:50px;height:50px;border:2px solid var(--cyan);background:transparent;color:var(--cyan)}
+
+/* últimas vivencias */
+.vivencias{padding:28px 0 34px;background:#fff}
+.titulo-seccion{margin-bottom:15px}
+.titulo-seccion h2{font-size:24px;letter-spacing:4px}
+.vivencias-grid{gap:22px}
+.tarjeta{border-radius:13px}
+.imagen-tarjeta{height:145px;font-size:40px}
+.contenido-tarjeta{padding:15px 18px}
+.contenido-tarjeta h3{font-size:18px}
+.contenido-tarjeta p{font-size:14px;margin-bottom:10px}
+.categoria{background:var(--cyan);color:#02223a;margin-bottom:7px}
+
+/* redes + footer */
+.contacto{padding:25px 0;background:linear-gradient(110deg,#021725,#06375d)}
+.contacto-grid{grid-template-columns:.7fr 1.3fr;gap:35px}
+.contacto h2{font-size:18px;letter-spacing:5px}
+.contacto p{font-size:14px}
+.redes{justify-content:flex-end}
+.red{
+ min-width:105px;text-align:center;padding:15px 14px;background:#071522;
+ border:1px solid rgba(0,217,245,.25);font-weight:700
+}
+footer{padding:16px;background:#021421}
+
+/* escritorio ancho: da apariencia de la referencia */
+@media (min-width:901px){
+ .hero-grid>div:first-child{padding-left:4px}
+}
+
+/* móvil */
+@media (max-width:900px){
+ .barra{min-height:76px}
+ .logo-oficial{width:205px;max-height:70px}
+ .hero{min-height:auto}
+ .hero-grid{padding:45px 0 0}
+ .foto-placeholder{height:380px}
+ .sobre-grid{gap:28px}
+ .contacto-grid{grid-template-columns:1fr}
+ .redes{justify-content:center}
+}
+@media (max-width:520px){
+ .logo-oficial{width:180px}
+ .hero h1{font-size:54px}
+ .foto-placeholder{height:330px}
+}
+</style>
+
 </head>
 
 <body>
