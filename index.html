@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luis Zamorio | Sitio Web Oficial</title>
+<meta name="description" content="Sitio web oficial de Luis Zamorio. Contabilidad, tecnología y vivencias.">
+<style>
+:root{
+  --navy:#021a2b; --navy2:#04395f; --cyan:#00d9f5; --blue:#0878e8;
+  --ink:#08244b; --muted:#536783; --line:#ccecff; --white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1420px,92%);margin:auto}
+
+/* PORTADA APROBADA */
+.hero{position:relative;background:var(--navy)}
+.hero>img{width:100%;height:auto;display:block;pointer-events:none}
+.hotspots{position:absolute;inset:0;z-index:5;pointer-events:none}
+.hotspots a{position:absolute;display:block;pointer-events:auto;cursor:pointer}
+/* menú de la imagen */
+.h-inicio{left:38.2%;top:2%;width:6.5%;height:9%}
+.h-sobre{left:44.7%;top:2%;width:7.6%;height:9%}
+.h-contador{left:52.3%;top:2%;width:7.6%;height:9%}
+.h-tecnologia{left:60%;top:2%;width:9%;height:9%}
+.h-vivencias{left:69%;top:2%;width:8%;height:9%}
+.h-contacto{left:77%;top:2%;width:8%;height:9%}
+/* botones de la imagen */
+.h-conoceme{left:4%;top:84%;width:12.5%;height:12%}
+.h-videos{left:16.5%;top:84%;width:13%;height:12%}
+
+/* PILARES */
+.pilares{padding:16px 0 20px;background:#fff}
+.pilares-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pilar{border:1px solid var(--line);border-radius:18px;text-align:center;padding:18px 24px;min-height:150px}
+.icon{font-size:44px;line-height:1;margin-bottom:8px}
+.pilar h3{margin:0 0 7px;font-size:21px}
+.pilar p{margin:0;color:var(--muted);font-size:16px;line-height:1.35}
+
+/* SOBRE MI */
+.sobre{background:linear-gradient(115deg,#011827,#043a60);color:white;padding:44px 0}
+.sobre-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:48px;align-items:center}
+.eyebrow{color:var(--cyan);font-weight:800;letter-spacing:.24em;margin:0 0 10px}
+.sobre h2{font-size:clamp(40px,4vw,58px);line-height:1.03;margin:0 0 18px}
+.cyan{color:var(--cyan)}
+.sobre p{font-size:16px;line-height:1.55;color:#eef8ff}
+.mas{display:inline-block;margin-top:10px;background:var(--cyan);color:#001a29;font-weight:800;padding:14px 22px;border-radius:12px}
+.herramientas{border:1px solid #0bbfe6;border-radius:16px;overflow:hidden;margin-bottom:16px}
+.herramientas img{width:100%;height:230px;object-fit:cover}
+.items{display:grid;gap:9px}
+.item{display:grid;grid-template-columns:46px 1fr;gap:12px;align-items:center;padding:9px 12px;border-left:1px solid rgba(0,217,245,.45)}
+.num{width:38px;height:38px;border:1px solid var(--cyan);border-radius:8px;display:grid;place-items:center;color:var(--cyan);font-weight:800}
+.item b{display:block;margin-bottom:3px}.item span{color:#d9ecf7;font-size:14px}
+
+/* VIVENCIAS */
+.vivencias{padding:30px 0 36px}
+.section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.section-title h2{margin:0;letter-spacing:.18em;font-size:24px}
+.section-title a{color:#0878e8;font-weight:700}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{border:1px solid var(--line);border-radius:15px;overflow:hidden;background:#fff;box-shadow:0 8px 24px rgba(4,38,74,.06)}
+.card-img{height:160px;background:linear-gradient(135deg,#075c8d,#08c4e6);display:grid;place-items:center;color:#fff;font-size:46px}
+.card-body{padding:16px 18px}
+.tag{display:inline-block;background:var(--cyan);color:#00283b;font-weight:800;font-size:12px;padding:6px 12px;border-radius:999px}
+.card h3{margin:10px 0 8px;font-size:20px}.card p{margin:0;color:var(--muted);line-height:1.45}
+
+/* REDES Y FOOTER */
+.redes-sec{background:linear-gradient(110deg,#011827,#043a60);color:#fff;padding:28px 0}
+.redes-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:36px;align-items:center}
+.redes-grid h2{letter-spacing:.18em;font-size:21px;margin:0 0 8px}
+.redes-grid p{margin:0;color:#d9ecf7}
+.redes{display:flex;gap:12px;justify-content:flex-end;flex-wrap:wrap}
+.red{min-width:110px;padding:15px 13px;border:1px solid rgba(255,255,255,.18);border-radius:12px;text-align:center;font-weight:800;background:rgba(0,0,0,.25)}
+footer{background:#011421;color:#d9ecf7;padding:18px 0}
+.footer-grid{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.footer-nav{display:flex;gap:18px;flex-wrap:wrap}
+.small{font-size:13px;color:#9fb8c9}
+
+@media(max-width:900px){
+  .hotspots{display:none}
+  .pilares-grid,.sobre-grid,.cards,.redes-grid{grid-template-columns:1fr}
+  .redes{justify-content:center}
+  .herramientas img{height:auto}
+  .section-title{align-items:flex-start;gap:12px}
+}
+</style>
+</head>
+<body>
+
+<main>
+  <section class="hero" id="inicio">
+    <img src="portada-aprobada.png" alt="Luis Zamorio — Sitio Web Oficial">
+    <nav class="hotspots" aria-label="Navegación de portada">
+      <a class="h-inicio" href="#inicio" aria-label="Inicio"></a>
+      <a class="h-sobre" href="#sobre-mi" aria-label="Sobre mí"></a>
+      <a class="h-contador" href="#contador" aria-label="Contador"></a>
+      <a class="h-tecnologia" href="#tecnologia" aria-label="Tecnología"></a>
+      <a class="h-vivencias" href="#vivencias" aria-label="Vivencias"></a>
+      <a class="h-contacto" href="#contacto" aria-label="Contacto"></a>
+      <a class="h-conoceme" href="#sobre-mi" aria-label="Conóceme"></a>
+      <a class="h-videos" href="#vivencias" aria-label="Ver videos"></a>
+    </nav>
+  </section>
+
+  <section class="pilares">
+    <div class="wrap pilares-grid">
+      <article class="pilar" id="contador"><div class="icon">🧮</div><h3>CONTADOR</h3><p>Conocimientos, herramientas y recursos de contabilidad.</p></article>
+      <article class="pilar" id="tecnologia"><div class="icon">💻</div><h3>TECNOLOGÍA</h3><p>Tutoriales, tips y soluciones para tu día a día.</p></article>
+      <article class="pilar"><div class="icon">💡</div><h3>VIVENCIAS</h3><p>Experiencias, reflexiones y aprendizajes de la vida real.</p></article>
+    </div>
+  </section>
+
+  <section class="sobre" id="sobre-mi">
+    <div class="wrap sobre-grid">
+      <div>
+        <p class="eyebrow">SOBRE MÍ</p>
+        <h2>CONTADOR,<br>TECNOLOGÍA<br>Y <span class="cyan">VIVENCIAS</span></h2>
+        <p>Soy Luis Zamorio, contador y apasionado por la tecnología. En este espacio comparto herramientas útiles, experiencias reales y vivencias que me han ayudado a ser más organizado y alcanzar mis metas.</p>
+        <a class="mas" href="#vivencias">Conoce más sobre mí →</a>
+      </div>
+      <div>
+        <div class="herramientas"><img src="herramientas.png" alt="Herramientas de contabilidad y tecnología"></div>
+        <div class="items">
+          <div class="item"><div class="num">01</div><div><b>Contador</b><span>Experiencia en administración, finanzas, organización y atención al cliente.</span></div></div>
+          <div class="item"><div class="num">02</div><div><b>Tecnología</b><span>Herramientas, configuraciones y soluciones prácticas para situaciones cotidianas.</span></div></div>
+          <div class="item"><div class="num">03</div><div><b>Vivencias</b><span>Experiencias, reflexiones y aprendizajes que deseo compartir.</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vivencias" id="vivencias">
+    <div class="wrap">
+      <div class="section-title"><h2>ÚLTIMAS <span class="cyan">VIVENCIAS</span></h2><a href="#vivencias">Ver todas →</a></div>
+      <div class="cards">
+        <article class="card"><div class="card-img">✦</div><div class="card-body"><span class="tag">VIVENCIAS</span><h3>Lecciones que deja la vida</h3><p>Cada etapa trae experiencias que pueden convertirse en aprendizaje.</p></div></article>
+        <article class="card"><div class="card-img">💻</div><div class="card-body"><span class="tag">TECNOLOGÍA</span><h3>Tecnología para hacer más sencillo el día</h3><p>Herramientas y funciones tecnológicas que pueden facilitar nuestras tareas.</p></div></article>
+        <article class="card"><div class="card-img">▣</div><div class="card-body"><span class="tag">CONTABILIDAD</span><h3>Organización y control</h3><p>Ideas y experiencias relacionadas con administración y organización financiera.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="redes-sec" id="contacto">
+    <div class="wrap redes-grid">
+      <div><h2>MIS REDES <span class="cyan">OFICIALES</span></h2><p>Sígueme en mis redes sociales para más contenido, herramientas y vivencias.</p></div>
+      <div class="redes">
+        <a class="red" href="#" aria-label="TikTok">TikTok</a>
+        <a class="red" href="#" aria-label="Facebook">Facebook</a>
+        <a class="red" href="#" aria-label="YouTube">YouTube</a>
+        <a class="red" href="#" aria-label="Instagram">Instagram</a>
+        <a class="red" href="#" aria-label="X / Twitter">X / Twitter</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <strong>LZ · LUIS ZAMORIO <span class="small">SITIO WEB OFICIAL</span></strong>
+    <nav class="footer-nav">
+      <a href="#inicio">Inicio</a><a href="#sobre-mi">Sobre mí</a><a href="#contador">Contador</a>
+      <a href="#tecnologia">Tecnología</a><a href="#vivencias">Vivencias</a><a href="#contacto">Contacto</a>
+    </nav>
+    <span class="small">© 2026 Luis Zamorio. Todos los derechos reservados.</span>
+  </div>
+</footer>
+
+</body>
+</html>
